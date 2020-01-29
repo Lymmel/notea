@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Three
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding class="bg-image">
+  <ion-item color="clear">
+    <ion-label>
+      Email
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item color="clear">
+    <ion-label>
+      Password
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <ion-item-divider color="clear">
+    <ion-button size="large" (click)="onLogin()" color="success">Login</ion-button>
+    <ion-button size="large" href="/registro" color="success">New</ion-button>
+  </ion-item-divider>
+</ion-content>
+
+
+ 

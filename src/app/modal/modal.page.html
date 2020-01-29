@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Editar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="todoForm" (ngSubmit)="editNote()">
+    <ion-item>
+      <ion-label>TODO</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-input formControlName="description"></ion-input>
+    </ion-item>  
+    <ion-button shape="round" color="primary" fill="solid" type="submit" [disabled]="!this.todoForm.valid">Editar</ion-button>
+  </form>
+</ion-content>
